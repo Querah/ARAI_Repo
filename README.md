@@ -1,7 +1,8 @@
 # ARAI_Repo
 My advanced robotic AI project is highly affected by https://github.com/OpenDriveLab/TCP.
 So if you want to get more information, you can go to link above. 
-### 0. Installation
+## 0. Installation
+git clone TCP and download CARLA
 ```
 git clone https://github.com/OpenDriveLab/TCP.git
 cd TCP
@@ -14,4 +15,10 @@ tar -xf AdditionalMaps_0.9.10.1.tar.gz
 rm CARLA_0.9.10.1.tar.gz
 rm AdditionalMaps_0.9.10.1.tar.gz
 cd ..
+```
+build the conda environment
+```
+cd TCP
+conda env create -f environment.yml --name TCP
+conda activate TCP
 ```
