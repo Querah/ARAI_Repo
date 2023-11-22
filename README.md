@@ -45,3 +45,28 @@ Before run this code, you have to modify leaderboard/leaderboard/leaderbaord_eva
 Also, you should change "PATH_TO_CARLA", the first line of leaderboard/scripts/data_collection.sh file, into "carla".
 
 ## 4. Evaluate
+From now, you should do several things to get the result.
+First change self.alpha into 0 in leaderboard/team_code/tcp_agent.py. And if you want PID controller only, make self.status==1 while multi-step controller only at status==0.
+You should change the weather. Go to the line 254 of the leaderboard/leaderboard/leaderboard_evaluator.py file.
+```
+  if args.weather != "none":
+    assert args.weather in WEATHERS
+    CarlaDataProvider.set_weather(WEATHERS[args.weather])
+```
+And change above code into under code. Notice that you should choose either first line or second line.
+```
+  w = carla.WeatherParameters(precipitation=100.0, precipitation_deposits=70.0, sun_altitude_angle=50.0, fog_density = 50.0, wetness=50.0) # when hard rain situation
+  w = carla.WeatherParameters(sun_altitude_angle=-30.0, fog_density = 50.0) # when night situation
+  CarlaDataProvider.set_weather(w)
+```
+ Then launch the carla sever
+```
+cd CARLA_ROOT
+./CarlaUE4.sh --world-port=2000 -opengl
+```
+and start evaluation.
+```
+sh leaderboard/scripts/run_evaluation.sh
+```
+Don't forget you shold rearrange the leaderboard/scripts/run_evaulation.py file according to your environment.
+
