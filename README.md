@@ -14,7 +14,6 @@ tar -xf CARLA_0.9.10.1.tar.gz
 tar -xf AdditionalMaps_0.9.10.1.tar.gz
 rm CARLA_0.9.10.1.tar.gz
 rm AdditionalMaps_0.9.10.1.tar.gz
-cd ..
 ```
 build the conda environment
 ```
