@@ -30,6 +30,7 @@ If there any problem, download via TCP repo.
 set the dataset path in TCP/config.py file and
 ```
 python TCP/train.py --gpus NUM_OF_GPUS
+```
 
 ## 3. Data generation
 launch the carla sever
