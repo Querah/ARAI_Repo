@@ -69,5 +69,5 @@ and start evaluation.
 ```
 sh leaderboard/scripts/run_evaluation.sh
 ```
-Don't forget you shold rearrange the leaderboard/scripts/run_evaulation.py file according to your environment.
+Don't forget you should rearrange the leaderboard/scripts/run_evaulation.py file according to your environment.
 
