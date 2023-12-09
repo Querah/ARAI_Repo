@@ -25,6 +25,7 @@ conda activate TCP
 You can get dataset(115G) at here.
 https://drive.google.com/file/d/1HZxlSZ_wUVWkNTWMXXcSQxtYdT7GogSm/view
 If there any problem, download via TCP repo. 
+Or you can download the reduced data via https://drive.google.com/file/d/1b4sGfCyNIqzJSGJPBm3lKiRMF3eqppxS/view?usp=sharing
 
 ## 2. Train
 set the dataset path in TCP/config.py file and
